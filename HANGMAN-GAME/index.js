@@ -8,7 +8,7 @@ const finalMessageRevealWord = document.getElementById('final-message-reveal-wor
 
 const figureParts = document.querySelectorAll('.figure-part');
 
-const words = ['life', 'programming', 'interface', 'wizard'];
+const words = ['life', 'job', 'developer', 'programming', 'interface', 'wizard'];
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
@@ -70,7 +70,7 @@ function showNotification() {
   notification.classList.add('show');
 
   setTimeout(() => {
-    notification.classList.remove('show');
+    notification.classList.remove('show')
   }, 2000);
 }
 // Keydown letter press
@@ -86,7 +86,7 @@ window.addEventListener('keydown', e => {
   
           displayWord();
         } else {
-          showNotification()
+          showNotification();
         }
       } else {
         if (!wrongLetters.includes(letter)) {
@@ -102,7 +102,7 @@ window.addEventListener('keydown', e => {
 });
 //  Restart game 
 playAgainBtn.addEventListener('click', () => {
-  playable =true;
+  playable = true;
   correctLetters.splice(0);
   wrongLetters.splice(0);
 
